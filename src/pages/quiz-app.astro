@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import VueQuiz from "../components/quiz-app/vueQuiz.vue";
+import ReactQuiz from "../components/quiz-app/reactQuiz";
+---
+
+<Layout title="Quiz App">
+  <h2>Quiz App</h2>
+  <ReactQuiz client:only="react" />
+  <VueQuiz client:only="vue" />
+</Layout>
+
+<style>
+  h2 {
+    color: #8d81f3;
+    text-align: center;
+    font-size: 40px;
+    margin: 20px;
+  }
+</style>
